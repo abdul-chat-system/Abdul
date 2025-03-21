@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_first_slide_bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- abdul-chat-system.liveblog365.com -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        .heade {
+            position: fixed;
+            background: #5a0053;
+            font-size: 2rem;
+            text-align: center;
+            padding: 10px 0;
+            color: #8000ff;
+            width: 100%;
+            top: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .heade p{
+            font-size: 13px;
+            padding: 0;
+        }
+        .bdy {
+            margin: 10px 50px;
+            margin-top: 120px;
+            background: #5a585c38;
+            padding: 20px;
+            border: .1px rgba(88, 78, 78, 0.308) solid;
+            border-radius: 15px;
+            box-shadow: 0 0 8px rgb(0, 0, 0);
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(119, 42, 42, 0.959);
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            max-width: 100%;
+        }
+        h4 {
+            color: #8000ff;
+            margin-bottom: 10px;
+        }
+        #lists {
+            margin-left: 20px;
+        }
+
+        .picha img {
+            display: block;
+            width: auto;
+            height: 200px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #00000015;
+            bottom: 3px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            text-align: justify;
+            margin: 0;
+            padding: 3px;
+        }
+        #pekee{
+            text-align: center;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
+        @media screen and (max-width: 1000px){
+            .content {
+                flex-wrap: wrap;
+                box-shadow: 0px 4px 10px #5a0053;
+            }
+            .heade {
+                font-size: 18px;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .explanation {
+                font-size: 16px;
+            }
+            .bdy {
+                margin: 0px 20px;
+                margin-top: 90px;
+            }
+            .toggle {
+                top: 71px;
+                left: 2px;
+            }
+            .slide {
+                top: 61px;
+                width: 170px;
+            }
+            .picha {
+                display: flex;
+                justify-content: center;
+            }
+            .picha img {
+                width: 230px;
+                height: auto;
+            }
+            footer {
+                padding: 15px;
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+            .bdy {
+                margin: 10px 20px;
+                margin-top: 110px;
+                padding: 10px;
+            }
+            .slide {
+                height: 410px;
+                width: 140px;
+                left: 61%;
+                font-size: 12px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            p{
+                width: 100%;
+                text-align: justify;
+                margin: 0;
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+        <div class="slide">
+            <h1>MENU</h1>
+            <ul>
+                <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#signup"><i class="fas fa-sign-in-alt"></i> Signup</a></li>
+                <li><a href="#Password"><i class="fas fa-key"></i> Password</a></li>
+                <li><a href="#Shared"><i class="far fa-comments"></i> messaging</a></li>
+                <li><a href="#mode"><i class="fas fa-sun"></i>Modes</a></li>
+                <li><a href="#login"><i class="fas fa-user"></i>Log in</a></li>
+                <li><a href="#Home"><i class="fas fa-home"></i> About Home</a></li>
+                <li><a href="#Chat"><i class="fas fa-comments"></i> Chat</a></li>
+                <li><a href="#Calling"><i class="fas fa-phone"></i> Calling system</a></li>
+                <li><a href="#Design"><i class="fas fa-palette"></i> Design</a></li>
+                <li><a href="about_abdul.html"><i class="fas fa-user-circle"></i> About me</a></li>
+            </ul>
+        </div>
+    </label>
+        <Header class="heade">
+            <h3 >ABDULTAWABU CHAT SYSYEM</h3>
+            <p id="pekee">abdul chat system</p>
+        </Header>
+        <div class="bdy">
+            <div class="content"id="signup">
+                <div class="explanation" >
+                    <h4>1. Signup (User Registration)</h4>
+                    <p>
+                        The signup process is the first step for a new user to join the Abdul Chat System. It allows users to create an account by providing essential details such as:
+                    </p>
+                    <ul id="lists">
+                        <li>First Name</li>
+                        <li>Last Name</li>
+                        <li>Email Address and </li> 
+                        <li>Phone Number</li>
+                    </ul>
+                    <p>
+                        The signup page should have a simple and intuitive design to make the registration process quick and easy.
+                    </p>
+                </div>
+                <div class="picha">
+                    <a href="images/1.png">
+                        <img src="images/1.png" alt="photo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="content" id="Password">
+                <div class="explanation">
+                    <h4>2. Automatic Password Creation After Signup</h4>
+                    <p>
+                        One of the standout features of Abdul Chat System is that the password is automatically generated upon successful registration.
+                    </p>
+                    <p>
+                        This ensures security and simplicity for users, as they don’t need to think of a password themselves.
+                    </p>
+                    <p>
+                        The system generates a random yet memorable password using a mix of letters and numbers (e.g., Q3T5 or X7P9).
+                        The generated password is sent via email or displayed on-screen after signup, with an option for the user to change it later.
+                    </p>
+                    <p>
+                        This feature improves security by reducing the risk of weak passwords and enhances user experience by simplifying the signup process.
+                    </p>
+                </div>
+                <div class="picha">
+                    <a href="images/2.png">
+                        <img src="images/2.png" alt="photo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="content" id="login">
+                <div class="explanation">
+                    <h4>3. Log In (Accessing the Chat System)</h4>
+                    <p>
+                        After signing up, users can log in using:<br>
+                        Their registered email or username. <br>
+                        The automatically generated password
+                    </p>
+                    <h4>The login system includes:</h4>
+                    <p>✅ Secure authentication – Prevents unauthorized access.</p>
+                    <p>✅ Forgot Password Option – Users can reset their password if they forget it.</p>
+                    
+                    <p>
+                        The signup page should have a simple and intuitive design to make the registration process quick and easy.
+                    </p>
+                    <h5>
+                        Upon successful login, the user is directed to the home page of the chat system.
+                    </h5>
+                </div>
+                <div class="picha">
+                    <a href="images/3.png">
+                        <img src="images/3.png" alt="photo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="content" id="Home">
+                <div class="explanation">
+                    <h4>4. Explanation About the Home Page</h4>
+                    <p>
+                        The home page serves as the main dashboard where users can: <br>
+                        See a list of available chats <b>(individual)</b>.<br>
+                        View notifications (new messages, friend requests, system updates).<br>
+                        <b>Check online users</b> – A sidebar shows who is currently active.<br>
+                        <b>Access chat settings</b> – Users can manage their profile, notifications, and security settings.
+                    </p>
+                    <p>
+                        The home page is designed to be clean and user-friendly, allowing easy navigation and quick access to the chat system's features.
+                    </p>
+                </div>
+                <div class="picha">
+                    <a href="images/4.png">
+                        <img src="images/4.png" alt="photo">
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="content"id="Chat">
+                <div class="explanation">
+                    <h4>5. Chat Frame (Main Chat Interface)</h4>
+                    <p>
+                       <h5> The chat frame is where real-time conversations happen. It consists of:</h5>
+                       <ul>
+                        <li style="list-style: none;"><b>  a) Chat Window</b></li>
+                       </ul>
+                      
+                        <p>
+                            Displays ongoing conversations with messages arranged in bubbles.
+                            Messages include timestamps and sender details.
+                        </p>
+                        <ul>
+                            <li style="list-style: none;"> <b> b) Input Field</b></li>
+                        </ul>
+                        <p>
+                            Users can type messages and send them instantly.<br>
+                            Emoji support for fun and expressive conversations.<br>
+                            Attachment option – Users can send images, files, or voice notes.
+                        </p>
+                        <ul>
+                            <li style="list-style: none;"> <b> c) Additional Features</b></li>
+                        </ul>
+                        <p>
+                            <b>Search feature</b> – Helps users find old messages quickly.
+                        </p>
+                        </p>
+                    <p>
+                        The home page is designed to be clean and user-friendly, allowing easy navigation and quick access to the chat system's features.
+                    </p>
+                </div>
+                <div class="picha">
+                    <a href="images/8.png">
+                        <img src="images/8.png" alt="photo">
+                    </a>
+                </div>
+            </div>
+            <div class="content" id="Shared">
+                <div class="explanation">
+                    <h4>6. Things That Can Be Shared in Abdul Chat System</h4>
+                    <p>
+                        The Abdul Chat System supports multiple types of media sharing to enhance user experience and make conversations 
+                        more interactive. Below is a detailed explanation of each type of content that users can share:
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>i. SMS (Text Messages).</b></li>
+                    </ul>
+                    <p>
+                        Users can send and receive instant text messages in real time,
+                        Messages appear in chat bubbles with timestamps,
+                        Typing indicators show when the other person is typing. <br>
+                        Users can edit or delete messages within a given time frame,
+                        Supports emoji reactions for quick responses.
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>ii. Photos (Image Sharing).</b></li>
+                    </ul>
+                    <p>
+                        Users can send and receive images within the chat.
+                        The system supports common image formats: JPEG, PNG, GIF, and WEBP. <br>
+                        Photos appear as thumbnails, and users can click to enlarge.
+                        There is an option to download images directly. <br>
+                        Supports image captions to describe the photo.
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>iii. Videos (Video Sharing).</b></li>
+                    </ul>
+                    <p>
+                        Users can upload and send videos directly from their device.
+                        Supported formats: MP4, AVI, and MOV. <br>
+                        Videos are displayed with a play button, allowing in-app playback.
+                        Users can choose to watch videos in full screen. <br>
+                        Video size limit can be adjusted in system settings to manage server storage.
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>iv. Audio (Voice Messages & Audio Files).</b></li>
+                    </ul>
+                    <p>
+                        Users can record and send voice notes directly from the chat.
+                        Supports sending pre-recorded audio files like music or podcasts.
+                        Common audio formats: MP3, WAV, AAC. <br>
+                        Users can play audio messages without downloading.
+                        Audio messages show a progress bar for playback control.                        
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>v. Documents (File Sharing).</b></li>
+                    </ul>
+                    <p>
+                        Users can share documents and files for work or personal use. <br>
+
+                       <h4> Supported document types:</h4>
+                        ✅ PDF (eBooks, reports, invoices) <br>
+                        ✅ Word (DOCX) (text files, resumes) <br>
+                        ✅ Excel (XLSX) (spreadsheets, financial reports) <br>
+                        ✅ PowerPoint (PPTX) (presentations) <br>
+                        ✅ ZIP/RAR (compressed files)<br>
+                        
+                        Users can preview certain files (like PDFs) before downloading.
+                                               
+                    </p>
+                </div>
+                <div class="photos">
+                    <div class="picha">
+                        <a href="images/17.png">
+                            <img src="images/17.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/14.png">
+                            <img src="images/14.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/13.png">
+                            <img src="images/13.png" alt="photo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content"id="mode">
+                <div class="explanation" >
+                    <h4>7. Mode Change: Light and Night Mode</h4>
+                    <p>
+                        The Abdul Chat System offers two modes to enhance user experience, especially in different lighting conditions:
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>i. Light Mode.</b></li>
+                    </ul>
+                    <p>
+                        Default setting: A bright interface with a clean, light background (usually white or light gray).
+                        The text is dark (usually black or dark gray) for easy readability. <br>
+                        The buttons and icons are designed with vibrant colors to create a fresh, clean look.
+                        Ideal for use during the day or in well-lit environments.
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>ii. Night Mode.</b></li>
+                    </ul>
+                    <p>
+                        Dark interface with a dark background (usually dark gray or black) to reduce eye strain in low-light settings. <br>
+                        The text is light-colored (white or light gray) to ensure contrast and readability.   <br>
+                        Buttons and icons are often toned down, typically using muted or blue accents, to complement the dark background. <br>
+                        Ideal for use at night or in dimly lit environments to reduce blue light exposure. <br>
+                    </p>
+                </div>
+                <div class="photos">
+                    <div class="picha">
+                        <a href="images/13.png">
+                            <img src="images/13.png" alt="night">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/8.png">
+                            <img src="images/8.png" alt="night">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="Calling">
+                <div class="explanation">
+                    <h4> 8. Video and Audio Calling</h4>
+                    <p>
+                        To enhance communication, the Abdul Chat System supports audio and video calling, providing users with more ways to interact in real-time.</p>
+                    <ul>
+                        <li style="list-style: none;"> <b>Audio Calls.</b></li>
+                    </ul>
+                    <p>
+                        Users can make clear voice calls with high-quality sound.
+                        The system uses low latency to ensure real-time communication. <br>
+                        Users can switch between voice and text chat during the call if needed.
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>Video Calls.</b></li>
+                    </ul>
+                    <p>
+                        Face-to-face interaction through video calls with clear video and audio quality.
+                        Supports one-on-one calls.   <br>
+                        Call duration indicators, and users can end or pause calls at any time.
+                    </p>
+                </div>
+                <div class="photos">
+                    <div class="picha">
+                        <a href="images/18.png">
+                            <img src="images/18.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/12.png">
+                            <img src="images/12.png" alt="photo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="Design">
+                <div class="explanation">
+                    <h4> 9. Design</h4>
+                    <p>
+                        The design of Abdul Chat System is optimized for both desktop and mobile devices, ensuring
+                        a seamless experience across various screen sizes.
+                    <ul>
+                        <li style="list-style: none;"> <b>i. Desktop Design.</b></li>
+                    </ul>
+                    <p>
+                        The desktop version is designed for larger screens (laptops, desktops, or tablets).
+                        The sidebar navigation contains menus for chats, settings, and contacts.  <br>
+                        The chat window is displayed in the center, allowing users to interact with messages, images, videos,
+                         and other media seamlessly. <br>
+                        The layout is more spread out, offering more space for viewing conversations and other elements like notifications 
+                        and online users. <br>
+                        The design is optimized for wide screens, ensuring all elements are well-aligned and accessible.
+
+                        <h4>Key features of the desktop design:</h4>
+                        ✅ Left sidebar for contacts and search <br>
+                        ✅ Main chat area for ongoing conversations<br>
+                        ✅ Top navigation bar for search and user settings<br>
+                    </p>
+                    <ul>
+                        <li style="list-style: none;"> <b>ii. Mobile Design.</b></li>
+                    </ul>
+                    <p>
+                        The mobile version is optimized for smaller screens (smartphones and smaller tablets).   <br>
+                        The interface is compact and responsive, adapting to various screen sizes and orientations (portrait/landscape).      <br>
+                        The bottom navigation bar includes quick access to chats, contacts, settings, and the profile.     <br>
+                        The chat window is adjusted to fit the screen size, with elements stacked vertically to maximize space.   <br>
+                        Push notifications are used to alert users to new messages and updates.
+
+                       <h4>Key features of the mobile design:</h4> 
+                        ✅ Bottom navigation for quick access to key areas <br>
+                        ✅ Compact, user-friendly layout for small screens <br>
+                        ✅ Floating action buttons for starting new chats or calls <br>
+                        ✅ Swipe gestures for switching between chats and contacts <br>
+                    </p>
+                    <p>
+                        The design is carefully tailored to deliver a smooth user experience on both desktop and mobile devices, ensuring functionality,
+                        accessibility, and ease of use across different screen sizes.
+                    </p>
+                </div>
+                <div class="photos">
+                    <div class="picha">
+                        <a href="images/10.png">
+                            <img src="images/10.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/16.png">
+                            <img src="images/16.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/14.png">
+                            <img src="images/14.png" alt="photo">
+                        </a>
+                    </div>
+                    <div class="picha">
+                        <a href="images/21.png">
+                            <img src="images/21.png" alt="photo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <p id="pekee">
+            &copy; abdul chat system All right are reserved
+        </p>
+    </footer>
+</body>
+</html>
